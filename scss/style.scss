@@ -2,13 +2,13 @@
 @import 'utilities';
 
 body {
-  background-color: $BackColor;
+  background-color: $SecHeadColor;
 }
 
 .navbar {
   height: 3rem;
   display: grid;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 2fr 1fr;
   background-color: $HeaderColor;
   font-style: $font-stack;
   margin: 0;
@@ -24,42 +24,77 @@ body {
       text-decoration: none;
     }
   }
+  ul {
+    justify-self: end;
+    li {
+      list-style-type: none;
+      display: inline;
+      a {
+        color: $ButtonColor;
+        text-decoration: none;
+        font-size: 18px;
+        padding-right: 15px;
+      }
 
-  li {
-    list-style-type: none;
-    display: inline;
-
-    a {
-      color: $ButtonColor;
-      text-decoration: none;
-      font-size: 18px;
-      padding-right: 15px;
-    }
-
-    a:hover {
-      color: $SecBackColor;
-      font-size: 99%;
+      a:hover {
+        color: $SecBackColor;
+        font-size: 99%;
+      }
     }
   }
 }
 
 .splashing {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  background-image: url('../images/seaEdge.png');
+  grid-template-columns: repeat(8, 1fr);
+  background-color: $BackColor;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   min-height: 20rem;
-
+//Jumbotron
   .splash  {
-    grid-column: 2/4;
-    grid-row: 10;
+    grid-column: 2/6;
+    align-self:center;
+    border: solid $HeaderColor;
+    border-radius: 1rem;
+    padding:2rem;
     h2 {
       color: $SecHeadColor;
-      font-size: 2rem;
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+      color: $SecHeadColor;
     }
     .btn {
-        
+      font-size: 1rem;
+      color: $ButtonColor;
+      background-color:  $HeaderColor;
+      border-radius: .5rem;
+      padding: .25rem;
+    }
+    .btn:hover {
+      color: $SecBackColor;
+      font-size: 95%;
     }
   }
+  //Side Image
+  .splashImg {
+    grid-column: 6/8;
+    align-self: center;
+    justify-self: start;
+    margin-left: 2rem;
+    img {
+       width: 15rem;
+    }
+  }
+}
+
+//footer
+.footer {
+  background-color: $BackColor;
+  height: 2rem;
+  margin-top: 90%;
+  font-size: .75rem;
+  padding-left: 1rem;
 }
