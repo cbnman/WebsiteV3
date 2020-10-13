@@ -1,6 +1,65 @@
-
+@import 'config';
+@import 'utilities';
 
 body {
-  color: #f4f4f4;
-  background-color: #fff;
+  background-color: $BackColor;
+}
+
+.navbar {
+  height: 3rem;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  background-color: $HeaderColor;
+  font-style: $font-stack;
+  margin: 0;
+
+  h1 {
+    color: $ButtonColor;
+    align-self: bottom;
+    margin-top: 0.75rem;
+    margin-left: 2rem;
+
+    a {
+      color: $ButtonColor;
+      text-decoration: none;
+    }
+  }
+
+  li {
+    list-style-type: none;
+    display: inline;
+
+    a {
+      color: $ButtonColor;
+      text-decoration: none;
+      font-size: 18px;
+      padding-right: 15px;
+    }
+
+    a:hover {
+      color: $SecBackColor;
+      font-size: 99%;
+    }
+  }
+}
+
+.splashing {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background-image: url('../images/seaEdge.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-height: 20rem;
+
+  .splash  {
+    grid-column: 2/4;
+    grid-row: 10;
+    h2 {
+      color: $SecHeadColor;
+      font-size: 2rem;
+    }
+    .btn {
+        
+    }
+  }
 }
