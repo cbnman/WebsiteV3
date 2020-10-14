@@ -4,15 +4,17 @@
 body {
   background-color: $SecHeadColor;
 }
-
+//Navbar
 .navbar {
+  overflow: hidden;
   height: 3rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
   background-color: $HeaderColor;
   font-style: $font-stack;
-  margin: 0;
-
+  position: fixed;
+  top: 0;
+  width: 100%;
   h1 {
     color: $ButtonColor;
     align-self: bottom;
@@ -27,6 +29,7 @@ body {
   ul {
     justify-self: end;
     li {
+      padding-right: 2rem;
       list-style-type: none;
       display: inline;
       a {
@@ -43,21 +46,23 @@ body {
     }
   }
 }
-
+//Jumbotron
 .splashing {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   background-color: $BackColor;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  min-height: 20rem;
-//Jumbotron
+  font-style: $font-stack;
+  margin-top: 10rem;
+  height: 25rem;
+  width: 75%;
+  margin-left: 12.5%;
+  border-radius: 2rem;
   .splash  {
     grid-column: 2/6;
     align-self:center;
     border: solid $HeaderColor;
     border-radius: 1rem;
-    padding:2rem;
+    padding:3rem;
     h2 {
       color: $SecHeadColor;
       font-size: 1.5rem;
@@ -82,7 +87,7 @@ body {
   .splashImg {
     grid-column: 6/8;
     align-self: center;
-    justify-self: start;
+    justify-self: end;
     margin-left: 2rem;
     img {
        width: 15rem;
@@ -92,9 +97,18 @@ body {
 
 //footer
 .footer {
+  font-style: $font-stack;
   background-color: $BackColor;
   height: 2rem;
   margin-top: 90%;
   font-size: .75rem;
   padding-left: 1rem;
+}
+
+@media(max-width:600px){
+  .splash{
+    img{
+      display: none;
+    }
+  }
 }
